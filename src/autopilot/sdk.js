@@ -1,6 +1,15 @@
-const copilotSDK = require('@condenast/copilot-js-sdk');
-const { SDKConnector } = require('@condenast/autopilot-models');
+let currentSDK;
 
-const config = require('../config');
+const SDKConnector = {
+  setSDK(sdk) {
+    currentSDK = sdk;
+  }
+};
+
+function copilotSDK(sdkConfig) {
+  this.sdkConfig = sdkConfig;
+}
+
+const config = require("../config");
 
 SDKConnector.setSDK(copilotSDK(config.sdk));

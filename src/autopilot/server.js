@@ -1,5 +1,9 @@
-const Server = require('@condenast/autopilot-server');
+class Server {
+  constructor(config) {
+    this.config = config;
+  }
+}
 
-const routes = require('../server/routes');
+const routes = require("../server/routes");
 
 module.exports = new Server({ routes });
