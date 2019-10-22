@@ -1,0 +1,62 @@
+{
+  "name": "how_do_i_test_that",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "moduleRoots": [
+    "."
+  ],
+  "scripts": {
+    "lint": "eslint src test",
+    "start": "NODE_ENV=development node src/index.js",
+    "test": "NODE_PATH=. mocha --require test/setup.js test --recursive",
+    "test:watch": "NODE_PATH=. mocha --require test/setup.js test --recursive --watch --bail",
+    "test:coverage": "NODE_PATH=. NODE_ENV=test nyc report npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@condenast/eslint-config-condenast": "^0.9.1",
+    "babel-cli": "^6.23.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "babel-preset-react": "^6.23.0",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "cheerio": "^0.22.0",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.16.1",
+    "eslint-plugin-mocha": "^4.8.0",
+    "eslint-plugin-react": "^6.10.0",
+    "jsdom": "^9.11.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
+    "proxyquire": "^1.7.11",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "@condenast/autopilot-models": "^2.9.0",
+    "@condenast/autopilot-server": "^8.1.0",
+    "@condenast/copilot-js-sdk": "^7.4.0",
+    "babel-register": "^6.23.0",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.4.2"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "test"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}

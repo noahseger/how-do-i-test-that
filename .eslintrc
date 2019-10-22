@@ -1,0 +1,14 @@
+{
+  "extends": [
+    '@condenast/eslint-config-condenast',
+    '@condenast/eslint-config-condenast/rules/ext/react'
+  ],
+  "plugins": [
+    "react",
+    "mocha"
+  ],
+  "rules": {
+    "react/jsx-uses-react": ["error"],
+    "import/no-extraneous-dependencies": ["off"]
+  }
+}
