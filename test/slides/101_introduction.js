@@ -1,6 +1,5 @@
-describe('Presentation', () => {
-
-  xit('is a little unusual', () => {
+describe("Presentation", () => {
+  it("is a little unusual", () => {
     throw new Error(`
 
       These tests are also a presentation.
@@ -12,19 +11,20 @@ describe('Presentation', () => {
     `);
   });
 
-  xit('has a speaker', () => {
+  it("has a speaker", () => {
     throw new Error(`
 
       Hi I'm Noah.
 
-      I work with a bunch of cool people on Condé Nast's Aviator team.
+      I work with a bunch of cool people at Kazoo, but wrote this while
+      leading teams at Condé Nast.
 
       Many the patterns in this talk are taken from the Brides Copilot
-      replatform we finished last year.
+      rewrite we finished in 2016, so the specifics are dated.
     `);
   });
 
-  xit('has a purpose', () => {
+  it("has a purpose", () => {
     throw new Error(`
 
       We have a lot of patterns that can be difficult to test.
