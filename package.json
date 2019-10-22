@@ -10,8 +10,8 @@
     "lint": "eslint src test",
     "start": "NODE_ENV=development node src/index.js",
     "test": "NODE_PATH=. mocha --require test/setup.js test --recursive",
-    "test:watch": "NODE_PATH=. mocha --require test/setup.js test --recursive --watch --bail",
-    "test:coverage": "NODE_PATH=. NODE_ENV=test nyc report npm run test"
+    "present": "NODE_PATH=. mocha --require test/setup.js test --recursive --watch --bail",
+    "coverage": "NODE_PATH=. NODE_ENV=test nyc report npm run test"
   },
   "keywords": [],
   "author": "",
